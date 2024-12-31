@@ -12,18 +12,20 @@ body {
 .directory {
     width: 15%;
     height: 100%;
-    background-color: #f4f4f4;
     border-right: 1px solid #ccc;
+    background-color: #f4f4f4;
     position: fixed;
     overflow: auto;
 }
 
 .content {
-    flex: 1;
+	width: 85%;
 	margin-left: 15%;
     padding: 20px;
-    overflow: auto;
+    border-left: 1px solid #ccc;
     background-color: #fff;
+	position: fixed;
+    overflow: auto;
 }
 
 footer {
@@ -52,4 +54,20 @@ a:hover {
 a:active {
 	color: red;
 }
+
+.tree ul {
+
+}
+
+.tree .node {
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.tree .node:hover {
+    background-color: blue;
+}
+
 
