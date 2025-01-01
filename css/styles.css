@@ -38,29 +38,41 @@ h3 {
 	font-family: var(--heading);
 }
 
-.container {
-    display: flex;
-    height: calc(100vh - 50px);
-    width: 100%;
+aside {
+	position: fixed;
+    width: 300px;
+    height: calc(100% - 71px);
 }
 
 .directory {
-    width: 15%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
     border-right: 1px solid var(--black);
     background-color: var(--ocean5);
-    position: fixed;
     overflow: auto;
 }
 
-.content {
-	width: 85%;
-	margin-left: 15%;
+.main {
+	position: fixed;
+	margin-left: 300px;
     padding: 20px;
     border-left: 1px solid var(--black);
     background-color: var(--white);
-	position: fixed;
     overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+	aside {
+		width: 100%;
+		height: 310px;
+		position: fixed;
+	}
+
+	.main {
+		width: 100%;
+		margin-top: 310px;
+		margin-left: 0px;
+	}
 }
 
 footer {
@@ -90,14 +102,13 @@ a:active {
 	color: red;
 }
 
-.tree ul {
-	display: inline-block;
+.tree {
+	width: 100%;
 }
 
 .tree .node {
 	cursor: pointer;
-	display: block;
-	width: 100%;
+	display: inline-block;
 	padding: 5px 10px;
     border-radius: 8px;
 	color: var(--black);
