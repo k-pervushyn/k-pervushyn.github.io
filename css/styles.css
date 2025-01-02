@@ -7,6 +7,8 @@
 	--ocean3: #2A6F97; /* white text */
 	--ocean4: #468FAF; /* black text */
 	--ocean5: #89C2D9; /* black text */
+
+	--green: #00FF00;
 }
 
 * {
@@ -36,7 +38,7 @@
 
 @media screen and (max-width: 600px) {
 	.content {
-		display: initial;
+		flex-direction: column;
 	}
 
 	.aside {
@@ -61,6 +63,7 @@ footer {
 }
 
 footer iframe {
+	display: block;
 	width: 100%;
 	height: 100%;
     background-color: var(--ocean2);
@@ -97,6 +100,7 @@ a:link, a:visited, a:hover, a:active {
 	--beautiful: 'Brush Script MT', cursive;
 	--heading: Helvetica, sans-serif;
 	--paragraph: Georgia, serif;
+	--monospace: 'Ubunto Mono', monospace;
 	
 	--h0_size: 3em;
 	--h1_size: 2em;
@@ -126,7 +130,7 @@ p.theorem {
 
 }
 
-p.proposition {
+p.prop {
 	font-size: var(--p_size);
 
 }
@@ -137,12 +141,26 @@ p.proof {
 }
 
 p.footer {
+	color: var(--white);
 	font-size: 16px;
+	text-align: center;
 }
 
 h1.beauty {
 	font-family: var(--beautiful);
 	font-size: var(--h0_size);
+}
+
+p.code {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	text-indent: 0;
+	background-color: var(--black);
+	color: var(--green);
+	font-family: var(--monospace);
+	font-size: 1.25em;
 }
 
 h1 {
