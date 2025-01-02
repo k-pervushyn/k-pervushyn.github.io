@@ -7,7 +7,93 @@
 	--ocean3: #2A6F97; /* white text */
 	--ocean4: #468FAF; /* black text */
 	--ocean5: #89C2D9; /* black text */
+}
 
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	min-height: calc(100vh - 50px);
+}
+
+.aside {
+    width: 300px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.main {
+	padding: 20px;
+	flex: 1;
+    border-left: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+	.content {
+		display: initial;
+	}
+
+	.aside {
+		width: 100%;
+		height: 310px;
+	}
+
+	.main {
+		border: 0;
+	}
+}
+
+.directory {
+	width: 100%;
+	height: 100%;
+    background-color: var(--ocean5);
+}
+
+footer {
+	height: 50px;
+	outline: 5px solid var(--ocean2);
+}
+
+footer iframe {
+	width: 100%;
+	height: 100%;
+    background-color: var(--ocean2);
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: red;
+}
+
+.tree ul {
+	padding-left: 25px;
+}
+
+.tree li {
+	margin: 5px;
+}
+
+.tree .node {
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 10px;
+    border-radius: 8px;
+	color: var(--black);
+	text-decoration: none;
+}
+
+.tree .node:hover {
+    background-color: var(--ocean1);
+	color: var(--white);
+}
+
+/*=====FONTS=====*/
+:root {
 	--beautiful: 'Brush Script MT', cursive;
 	--heading: Helvetica, sans-serif;
 	--paragraph: Georgia, serif;
@@ -17,12 +103,6 @@
 	--h2_size: 1.66em;
 	--h3_size: 1.33em;
 	--p_size: 1em;
-}
-
-body {
-    margin: 0;
-	font-size: var(--p_size);
-    font-family: var(--paragraph);
 }
 
 p {
@@ -79,89 +159,4 @@ h3 {
 	font-family: var(--heading);
 	font-size: var(--h3_size);
 }
-
-aside {
-	position: fixed;
-    width: 300px;
-    height: calc(100% - 75px);
-}
-
-.directory {
-	width: 100%;
-	height: 100%;
-    border-right: 1px solid var(--black);
-    background-color: var(--ocean5);
-    overflow: auto;
-}
-
-.main {
-	position: fixed;
-	margin-left: 300px;
-	padding: 20px;
-    border-left: 1px solid var(--black);
-    background-color: var(--white);
-    overflow: auto;
-}
-
-@media screen and (max-width: 600px) {
-	aside {
-		width: 100%;
-		height: 310px;
-		position: fixed;
-	}
-
-	.main {
-		margin: 310px 0px 0px 0px;
-	}
-}
-
-footer {
-    padding: 10px;
-    background-color: var(--ocean2);
-    border-top: 1px solid var(--black);
-    height: 54px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer iframe {
-	width: 100%;
-	height: 100%;
-}
-
-a:link {
-	color: red;
-}
-
-a:visited {
-	color: red;
-}
-
-a:hover {
-	color: green;
-}
-
-a:active {
-	color: red;
-}
-
-.tree {
-	width: 100%;
-}
-
-.tree .node {
-	cursor: pointer;
-	display: inline-block;
-	padding: 5px 10px;
-    border-radius: 8px;
-	color: var(--black);
-	text-decoration: none;
-}
-
-.tree .node:hover {
-    background-color: var(--ocean1);
-	color: var(--white);
-}
-
 
